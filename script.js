@@ -9,7 +9,7 @@ xmlhttp.onreadystatechange=function()
 		var csrf_token = settingHTML.match(patt1);
 		var email = window.location.href;
 		email=email.split('?')
-		alert(email);
+		alert(email[email.length-1]);
 //		var url = 'https://lnwaccounts.com/manage/setting/email/add';
 //		var form = $('<form action="' + url + '" method="post">' +
 //		'<input type="hidden" name="email" value="temporary@netassess.co.th" />' +
