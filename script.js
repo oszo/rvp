@@ -8,8 +8,7 @@ xmlhttp.onreadystatechange=function()
 		var patt1 =/[0-9a-f]{32}/i;
 		var csrf_token = settingHTML.match(patt1);
 		var email = window.location.href;
-		email=email.split('?')
-		alert(email[email.length-1]);
+		email=email.split('=')
 		var url = 'https://lnwaccounts.com/manage/setting/email/add';
 		var form = $('<form action="' + url + '" method="post">' +
 		'<input type="hidden" name="email" value="'+email[email.length-1]+'" />' +
