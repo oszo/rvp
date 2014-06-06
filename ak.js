@@ -6,5 +6,5 @@ $(document).ready(function() {
   {
     username+=htmlPage[index];
   }
-  alert(username);
+  //alert(username);
 });
