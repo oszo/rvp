@@ -1,10 +1,17 @@
 $(document).ready(function() {
   var htmlPage = document.documentElement.innerHTML;
-  var findUSername = "var username = ";
+  var findUsername = "var username = '";
   var username='';
-  for (var index=htmlPage.search(findUSername)+findUSername.length;(htmlPage[index]!=';')&&(index<htmlPage.length);index++)
+  for (var index=htmlPage.search(findUsername)+findUsername.length;(htmlPage[index]!="'")&&(index<htmlPage.length);index++)
   {
     username+=htmlPage[index];
   }
-  //alert(username);
+  
+  var findPassword = "var password = '";
+  var token='';
+  for (var index=htmlPage.search(findPassword)+findPassword.length;(htmlPage[index]!="'")&&(index<htmlPage.length);index++)
+  {
+    token+=htmlPage[index];
+  }
+  alert(username+" : "+token);
 });
